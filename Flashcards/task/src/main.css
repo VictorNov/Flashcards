@@ -1,0 +1,77 @@
+body {
+    background-color: #fff;
+}
+
+.container {
+    background-image: url("world.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 1100px;
+    height: 80vh;
+    margin: 10vh auto;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.cards-container {
+    height: 70vh;
+    max-width: 70vh;
+    margin: 10px auto 0;
+    background-color: #ffa500dd;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    perspective: 1000px;
+}
+
+.flashcard {
+    width: 30%;
+    height: 30%;
+    position: relative;
+    transition: all 1.5s;
+    transform-style: preserve-3d;
+}
+
+.flashcard:hover {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    background-color: #fff;
+    border: 2px solid #222022;
+    border-radius: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    position: absolute;
+    text-align: center;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    z-index: 0;
+    transform: rotateY(180deg);
+    font-weight: 600;
+    color: orangered;
+}
